@@ -1,0 +1,14 @@
+.md-banner {
+    display: block;
+    width: 100%;
+    background: url('http://thumb1.shutterstock.com/display_pic_with_logo/660385/269227808/stock-photo-planet-earth-from-the-space-at-night-some-elements-of-this-image-furnished-by-nasa-269227808.jpg');
+    background-size: cover;
+    height: 265px;
+    background-repeat: no-repeat;
+    background-position-y: 45%;
+}
+
+.childItems md-list {
+    padding-top: 0;
+    background: #F3F3F3;
+}
