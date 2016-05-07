@@ -12,3 +12,28 @@
     padding-top: 0;
     background: #F3F3F3;
 }
+
+.page {
+
+}
+.page__content {
+
+}
+.page__content-form md-input-container textarea {
+	min-height: 400px!important;
+	max-height: 400px!important;
+}
+
+pre {
+    background: #F5F5F5;
+    padding: 15px;
+}
+
+.md-toolbar-smaller {
+    min-height: initial;
+}
+
+
+.md-toolbar-smaller span {
+    padding: 5px 15px;
+}
