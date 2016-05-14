@@ -19,10 +19,16 @@
 .page__content {
 
 }
-.page__content-form md-input-container textarea {
-	min-height: 400px!important;
-	max-height: 400px!important;
+.page__content-form {
+
+    overflow: hidden;
 }
+.md-fab-toolbar {
+    position: absolute;
+    bottom: 0;  
+    width: 100%;
+}
+    
 
 pre {
     background: #F5F5F5;

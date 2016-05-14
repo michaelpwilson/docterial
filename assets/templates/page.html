@@ -1,0 +1,43 @@
+<md-toolbar class="md-toolbar-smaller md-warn">
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" ng-click="goBack(page.category)" aria-label="Go Back">
+      <md-icon class="material-icons">arrow_back</md-icon>
+    </md-button>
+    <h2>
+      <span>{{page.name}}</span>
+    </h2>
+    <span flex></span>
+    <md-button class="md-raised" ng-click="pageMode == 'edit' ? pageMode = 'view' : pageMode = 'edit'" aria-label="Learn More">
+      <md-icon class="material-icons">{{pageMode == 'edit' ? 'chrome_reader_mode' : 'mode_edit'}}</md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+
+<md-content flex layout="column" class="page__content">
+
+  <form layout-column flex ng-submit="updateContent(page.content, page.id)" class="page__content-form" name="pageEdit" ng-if="pageMode == 'edit'">
+    <md-input-container class="md-block">
+            <label>Content</label>
+            <textarea style="height: {{getPageHeight()}}px;" ng-model="page.content.input"></textarea>
+    </md-input-container>
+    <md-fab-toolbar 
+      md-open="fabToolbarOpen"
+      count="fabToolbarCount"
+      md-direction="{{fabToolbarDirection}}">
+      <md-fab-trigger class="align-with-text">
+        <md-button aria-label="menu" class="md-fab md-primary">
+          <md-icon class="material-icons">menu</md-icon>
+        </md-button>
+      </md-fab-trigger>
+      <md-toolbar>
+        <md-fab-actions class="md-toolbar-tools">
+          <md-button type="submit">Update</md-button>
+        </md-fab-actions>
+      </md-toolbar>
+    </md-fab-toolbar>
+
+  </form>
+
+  <div class="md-padding" ng-if="pageMode == 'view'" marked="page.content.input"></div>
+
+</md-content>

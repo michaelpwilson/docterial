@@ -75,6 +75,18 @@ angular
         templateUrl: "/templates/page.html",
             controller: function($scope, $stateParams, $sails, $http, $state) {
 
+              $scope.getPageHeight = function() {
+
+                return $("form").height() - 20;
+
+              };
+
+              $scope.pageHeight = $scope.getPageHeight();
+
+              $scope.fabToolbarOpen = false;
+              $scope.fabToolbarCount = 0;
+              $scope.fabToolbarDirection = "";
+
               $scope.goBack = function(id) {
 
                 $state.go('/category', {id: id});

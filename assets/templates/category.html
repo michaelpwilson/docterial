@@ -1,0 +1,24 @@
+<div flex>
+
+    <md-toolbar class="md-toolbar-smaller md-warn">
+        <span>{{category.name}}</span>
+    </md-toolbar>
+
+	<md-content  class="md-padding"  layout="row" layout-wrap>
+
+        <md-card flex="100" flex-gt-sm="30" ng-repeat="page in category.pages">
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">{{page.name}}</span>
+              <span class="md-subhead">{{page.updatedAt}}</span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-actions layout="row" layout-align="end center">
+            <md-button ng-click="viewPage(page, 'edit')">Edit</md-button>
+            <md-button ng-click="viewPage(page, 'view')">View</md-button>
+          </md-card-actions>
+        </md-card>
+
+	</md-content>
+
+</div>
